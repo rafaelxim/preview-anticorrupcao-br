@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/preview-anticorrupcao-br/static/css/main.c1898d08.chunk.css",
+    "main.js": "/preview-anticorrupcao-br/static/js/main.4bc40a76.chunk.js",
+    "main.js.map": "/preview-anticorrupcao-br/static/js/main.4bc40a76.chunk.js.map",
+    "runtime-main.js": "/preview-anticorrupcao-br/static/js/runtime-main.a6239d86.js",
+    "runtime-main.js.map": "/preview-anticorrupcao-br/static/js/runtime-main.a6239d86.js.map",
+    "static/js/2.a3d64e5d.chunk.js": "/preview-anticorrupcao-br/static/js/2.a3d64e5d.chunk.js",
+    "static/js/2.a3d64e5d.chunk.js.map": "/preview-anticorrupcao-br/static/js/2.a3d64e5d.chunk.js.map",
+    "index.html": "/preview-anticorrupcao-br/index.html",
+    "static/css/main.c1898d08.chunk.css.map": "/preview-anticorrupcao-br/static/css/main.c1898d08.chunk.css.map",
+    "static/js/2.a3d64e5d.chunk.js.LICENSE.txt": "/preview-anticorrupcao-br/static/js/2.a3d64e5d.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/preview-anticorrupcao-br/static/media/Metropolis-Regular.67a1988d.otf",
+    "static/media/anticorrupcao_logo.48fe8d78.svg": "/preview-anticorrupcao-br/static/media/anticorrupcao_logo.48fe8d78.svg",
+    "static/media/styles.scss": "/preview-anticorrupcao-br/static/media/wood.f3a44027.svg",
+    "static/media/board.fafb8012.png": "/preview-anticorrupcao-br/static/media/board.fafb8012.png",
+    "static/media/brMalls_logo.1020687c.svg": "/preview-anticorrupcao-br/static/media/brMalls_logo.1020687c.svg",
+    "static/media/calc.dadffc75.png": "/preview-anticorrupcao-br/static/media/calc.dadffc75.png",
+    "static/media/fone.34c5754a.png": "/preview-anticorrupcao-br/static/media/fone.34c5754a.png",
+    "static/media/mobile.cffa0962.png": "/preview-anticorrupcao-br/static/media/mobile.cffa0962.png",
+    "static/media/monitor.6d7cd923.png": "/preview-anticorrupcao-br/static/media/monitor.6d7cd923.png",
+    "static/media/mouse.304330a0.png": "/preview-anticorrupcao-br/static/media/mouse.304330a0.png",
+    "static/media/paper01.63daea44.png": "/preview-anticorrupcao-br/static/media/paper01.63daea44.png",
+    "static/media/pencils.e8bab4f3.png": "/preview-anticorrupcao-br/static/media/pencils.e8bab4f3.png",
+    "static/media/porta_retrato.0ed751ef.png": "/preview-anticorrupcao-br/static/media/porta_retrato.0ed751ef.png",
+    "static/media/tel.2e6466fb.png": "/preview-anticorrupcao-br/static/media/tel.2e6466fb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a6239d86.js",
+    "static/js/2.a3d64e5d.chunk.js",
+    "static/css/main.c1898d08.chunk.css",
+    "static/js/main.4bc40a76.chunk.js"
+  ]
+}
