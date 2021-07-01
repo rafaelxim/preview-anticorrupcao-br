@@ -1,0 +1,19 @@
+.head {
+  &__logo {
+    width: 17rem;
+    margin: 0 6rem;
+  }
+
+  &__header {
+    height: 9.6rem;
+    background-color: #063892;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logoAnticorrupcao {
+    width: 30rem;
+    margin: 0 6rem;
+  }
+}

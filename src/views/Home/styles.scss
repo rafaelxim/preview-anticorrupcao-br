@@ -1,0 +1,161 @@
+.home {
+  min-height: 100vh;
+  background-image: url("../../assets/wood.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__topItems {
+    margin-top: 8.3rem;
+    position: relative;
+  }
+
+  &__portaRetrato {
+    width: 27rem;
+    position: absolute;
+    left: 11%;
+    opacity: 0;
+    top: 10rem;
+    cursor: pointer;
+  }
+
+  &__monitor {
+    width: 92rem;
+    position: absolute;
+    left: 30%;
+    z-index: 2;
+    cursor: pointer;
+
+    &.withBorder {
+      filter: drop-shadow(9px 8px 0 #3c79e9) drop-shadow(-15px -12px 0 #3c79e9);
+    }
+  }
+
+  &__fone {
+    width: 57rem;
+    position: absolute;
+    left: 60%;
+    top: 2rem;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__tel {
+    position: absolute;
+    left: 80%;
+    width: 21.8rem;
+    top: 10rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__pencils {
+    position: absolute;
+    width: 39.5rem;
+    left: 3%;
+    top: 34rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__paper01 {
+    position: absolute;
+    width: 48rem;
+    left: 15%;
+    top: 36rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__board {
+    position: absolute;
+    width: 48.3rem;
+    left: 14%;
+    top: 36rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__key {
+    position: absolute;
+    width: 56.6rem;
+    left: 37%;
+    top: 56rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__calc {
+    position: absolute;
+    width: 23.3rem;
+    left: 59%;
+    top: 32rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__mouse {
+    position: absolute;
+    width: 12.2rem;
+    left: 65%;
+    top: 67rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__mobile {
+    position: absolute;
+    width: 14.4rem;
+    left: 80%;
+    top: 60rem;
+    opacity: 0;
+    cursor: pointer;
+
+    &.withBorder {
+      filter: drop-shadow(5px 1px 0 #3c79e9) drop-shadow(-4px -4px 0 #3c79e9);
+    }
+  }
+
+  &__action {
+    margin-top: 87rem;
+    height: 10rem;
+    opacity: 0.75;
+    color: #00386b;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 87rem 4.8rem 0 4.8rem;
+    border-radius: 2rem 0;
+    position: relative;
+    top: 10rem;
+    opacity: 0;
+  }
+
+  &__mobileBlur {
+    height: 20rem;
+    width: 20rem;
+    background: #063892;
+    border-radius: 50%;
+    filter: blur(13px);
+    left: 79%;
+    position: absolute;
+    top: 51rem;
+  }
+
+  &__monitorBlur {
+    height: 24rem;
+    width: 70rem;
+    background: #063892;
+    border-radius: 21%;
+    filter: blur(32px);
+    left: 36%;
+    position: absolute;
+    top: 2rem;
+  }
+}

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: Metropolis;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 55%;
+
+  // @media only screen and (max-width: 2000px) {
+  //   font-size: 52%;
+  // }
+
+  @media only screen and (max-width: 1900px) {
+    font-size: 51%;
+  }
+
+  @media only screen and (max-width: 1536px) {
+    font-size: 42%;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    font-size: 37%;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: local("Metropolis"),
+    url(../src/assets/Metropolis/Metropolis-Regular.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+.app {
+  &__mobileContainer {
+    opacity: 0;
+  }
+}
