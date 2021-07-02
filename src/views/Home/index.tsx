@@ -54,6 +54,19 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           />
         )}
 
+        {highlight && steps.monitor && !steps.pencils && (
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 1,
+              loop: Infinity,
+            }}
+            className="home__pencilsBlur"
+          />
+        )}
+
         <motion.img
           animate={{ opacity: 1, top: 0, transition: { duration: 2 } }}
           className="home__portaRetrato"
@@ -78,6 +91,7 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           onClick={() =>
             steps.mobile && !steps.monitor ? clickedItem("monitor") : false
           }
+          // onClick={() => clickedItem("monitor")}
         />
         <motion.img
           animate={{

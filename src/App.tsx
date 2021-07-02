@@ -10,6 +10,7 @@ import Monitor from "./views/Monitor";
 export type Steps = {
   mobile: boolean;
   monitor: boolean;
+  pencils: boolean;
 };
 
 const App: React.FC = () => {
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   const [steps, setSteps] = useState<Steps>({
     mobile: false,
     monitor: false,
+    pencils: false,
   });
 
   const completedStep = (step: string) => {

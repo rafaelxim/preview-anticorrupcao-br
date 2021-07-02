@@ -8,7 +8,7 @@
     background: #e3e8eb;
     margin: 4rem 0rem;
     color: #495e84;
-    font-size: 3.6rem;
+    font-size: 2.9rem;
     font-weight: bolder;
     padding: 2rem 0;
     cursor: pointer;
@@ -18,11 +18,11 @@
 
     > img {
       margin-left: 2rem;
+      width: 3rem;
     }
 
     &.done {
-      background: #31c6d3;
-      opacity: 0.5;
+      background: #31c5d37a;
       color: #fff;
     }
   }
@@ -31,9 +31,18 @@
     background: #e3e8eb;
     margin: 0 0 2rem 0;
     color: #495e84;
-    font-size: 3.3rem;
+    font-size: 2.6rem;
     font-weight: bolder;
     padding: 1.5rem 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0;
+    }
   }
 
   &__imgContainer {
@@ -42,9 +51,10 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
+    bottom: -27rem;
+    opacity: 0;
 
     > img {
-      width: 140rem;
       height: 82rem;
     }
   }
@@ -52,15 +62,16 @@
   &__questionContainer {
     position: absolute;
     height: 40rem;
-    width: 120rem;
+    width: 83rem;
     bottom: 30rem;
 
     > img {
       width: 5rem;
       position: absolute;
       right: 1rem;
-      top: 1rem;
+      top: 0.5rem;
       cursor: pointer;
+      opacity: 0;
     }
   }
 
@@ -92,6 +103,7 @@
     font-size: 3rem;
     text-align: left;
     overflow-y: auto;
+    opacity: 0;
 
     ul > li {
       margin: 2rem 0;
@@ -111,6 +123,16 @@
     font-size: 4rem;
     color: #fff;
     border-left: 1.3rem solid #063793;
+    display: flex;
+    position: relative;
+    opacity: 0;
+    left: -13rem;
+
+    span {
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
 
   &__title2 {
@@ -123,10 +145,10 @@
     display: flex;
 
     span {
-      //   width: 0;
+      width: 0;
       text-align: right;
-      //   white-space: nowrap; /* Keeps the content on a single line */
-      //   overflow: hidden;
+      white-space: nowrap; /* Keeps the content on a single line */
+      overflow: hidden;
       padding-top: 0.5rem;
     }
   }
@@ -137,8 +159,8 @@
     background-color: #063793;
     margin-left: 0.7rem;
     position: relative;
-    // right: -4rem;
-    // opacity: 0;
+    right: -10rem;
+    opacity: 0;
   }
 
   &__actions {
@@ -146,5 +168,10 @@
     bottom: 3rem;
     margin: 0 5rem;
     right: 0;
+
+    button {
+      position: relative;
+      right: -6rem;
+    }
   }
 }

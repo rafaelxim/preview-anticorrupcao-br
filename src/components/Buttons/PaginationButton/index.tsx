@@ -5,6 +5,8 @@ import {
   TargetAndTransition,
   VariantLabels,
 } from "framer-motion";
+import forwardIcon from "../../../assets/ic-avan.svg";
+import returnIcon from "../../../assets/ic-voltar.svg";
 import "./styles.scss";
 
 type Props = {
@@ -30,7 +32,11 @@ const PaginationButton: React.FC<Props> = ({
       type="button"
       className="paginationButton"
     >
-      {mode === "return" ? "<" : ">"}
+      {mode === "return" ? (
+        <img src={returnIcon} alt="retornar" />
+      ) : (
+        <img src={forwardIcon} alt="avancar" />
+      )}
     </motion.button>
   );
 };

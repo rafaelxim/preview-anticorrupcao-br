@@ -163,12 +163,21 @@ const Mobile: React.FC<Props> = ({ returnHomeClick, onCompleteSmartPhone }) => {
               alt="smartphone"
               className="mobile2__smartphone"
             />
-            <img
-              src={playImg}
-              alt="playButtona"
-              className="mobile2__play"
-              onClick={() => setVideoVisible(true)}
-            />
+            {!viewedVideo && (
+              <motion.img
+                animate={{
+                  opacity: [1, 0, 1],
+                }}
+                transition={{
+                  duration: 0.8,
+                  loop: Infinity,
+                }}
+                src={playImg}
+                alt="playButtona"
+                className="mobile2__play"
+                onClick={() => setVideoVisible(true)}
+              />
+            )}
           </motion.div>
           <div className="mobile__actions secondPage">
             <PaginationButton

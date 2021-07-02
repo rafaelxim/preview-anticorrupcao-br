@@ -29,7 +29,8 @@
     cursor: pointer;
 
     &.withBorder {
-      filter: drop-shadow(9px 8px 0 #3c79e9) drop-shadow(-15px -12px 0 #3c79e9);
+      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
+        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
     }
   }
 
@@ -115,7 +116,8 @@
     cursor: pointer;
 
     &.withBorder {
-      filter: drop-shadow(5px 1px 0 #3c79e9) drop-shadow(-4px -4px 0 #3c79e9);
+      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
+        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
     }
   }
 
@@ -157,5 +159,16 @@
     left: 36%;
     position: absolute;
     top: 2rem;
+  }
+
+  &__pencilsBlur {
+    height: 20rem;
+    width: 22rem;
+    background: #063892;
+    border-radius: 21%;
+    filter: blur(32px);
+    left: 8%;
+    position: absolute;
+    top: 28rem;
   }
 }

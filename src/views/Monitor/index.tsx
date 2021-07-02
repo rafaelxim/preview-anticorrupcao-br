@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import imacImg from "../../assets/imac.png";
+import { motion } from "framer-motion";
+import imacImg from "../../assets/monitor.svg";
 import closeIcn from "../../assets/close.svg";
 import checkIcn from "../../assets/double-check.svg";
 import Header from "../../components/Header";
@@ -81,13 +82,50 @@ const Monitor: React.FC<Props> = ({ onCompleteStep }) => {
       <div className="monitor__content">
         <div className="monitor__bgCol" />
         <div className="monitor__titles">
-          <div className="monitor__title1"> CLIQUE NAS PERGUNTAS </div>
+          <motion.div
+            animate={{
+              left: 0,
+              opacity: 1,
+              transition: { delay: 2 },
+            }}
+            className="monitor__title1"
+          >
+            <motion.span
+              animate={{
+                width: "100%",
+                transition: { delay: 2.3 },
+              }}
+            >
+              CLIQUE NAS PERGUNTAS{" "}
+            </motion.span>
+          </motion.div>
           <div className="monitor__title2">
-            <span>A LEI ANTICORRUPÇÃO É PARA TODOS</span>
-            <div className="monitor__mark" />
+            <motion.span
+              animate={{
+                width: "100%",
+                transition: { delay: 1.5 },
+              }}
+            >
+              A LEI ANTICORRUPÇÃO É PARA TODOS
+            </motion.span>
+            <motion.div
+              animate={{
+                right: 0,
+                opacity: 1,
+                transition: { delay: 0.8 },
+              }}
+              className="monitor__mark"
+            />
           </div>
         </div>
-        <div className="monitor__imgContainer">
+        <motion.div
+          animate={{
+            bottom: 0,
+            opacity: 1,
+            transition: { delay: 2.8, duration: 1.5 },
+          }}
+          className="monitor__imgContainer"
+        >
           <img src={imacImg} alt="imac" />
           {!selectedQuestion ? (
             <div className="monitor__questionContainer">
@@ -121,27 +159,49 @@ const Monitor: React.FC<Props> = ({ onCompleteStep }) => {
             </div>
           ) : (
             <div className="monitor__questionContainer">
-              <img
+              <motion.img
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 1, delay: 2.3 },
+                }}
                 onClick={() => setSelectedQuestion(null)}
                 src={closeIcn}
                 alt="close"
               />
-              <div className="monitor__mainQuestion">
-                {selectedQuestion?.question}
-              </div>
-              <div
+              <motion.div
+                animate={{ opacity: 1, transition: { duration: 1 } }}
+                className="monitor__mainQuestion"
+              >
+                <motion.span
+                  animate={{
+                    width: "100%",
+                    transition: { delay: 1, duration: 1.5 },
+                  }}
+                >
+                  {selectedQuestion?.question}
+                </motion.span>
+              </motion.div>
+              <motion.div
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 2, duration: 1 },
+                }}
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{ __html: selectedQuestion?.answer }}
                 className="monitor__answer"
               />
             </div>
           )}
-        </div>
+        </motion.div>
         {!questions.find((q) => {
           return q.done === false;
         }) && (
           <div className="monitor__actions">
             <PaginationButton
+              animation={{
+                right: 0,
+                opacity: 1,
+              }}
               mode="forward"
               clickPaginateButton={() => onCompleteStep("monitor")}
             />
