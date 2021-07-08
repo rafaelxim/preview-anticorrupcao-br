@@ -143,6 +143,10 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           className="home__pencils"
           src={pencils}
           alt="pencils"
+          onClick={() =>
+            // steps.monitor && !steps.pencils ? clickedItem("pencils") : false
+            clickedItem("pencils")
+          }
         />
         <motion.img
           animate={{

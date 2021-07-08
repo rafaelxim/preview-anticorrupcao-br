@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Welcome from "./views/Welcome";
 import Home from "./views/Home";
 import Mobile from "./views/Mobile";
+import Pencils from "./views/Pencils";
 import "./App.scss";
 import Monitor from "./views/Monitor";
 
@@ -59,6 +60,14 @@ const App: React.FC = () => {
           initial={{ opacity: 0 }}
         >
           <Monitor onCompleteStep={(step) => completedStep(step)} />
+        </motion.div>
+      )}
+      {currentView === "pencils" && (
+        <motion.div
+          animate={{ opacity: 1, transition: { duration: 1.2 } }}
+          initial={{ opacity: 0 }}
+        >
+          <Pencils />
         </motion.div>
       )}
     </div>

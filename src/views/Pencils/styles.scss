@@ -1,0 +1,124 @@
+.pencils {
+  min-height: 100vh;
+  background-image: url("../../assets/wood.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__lapis {
+    position: absolute;
+    left: 1%;
+    width: 24rem;
+    top: 8rem;
+  }
+
+  &__title2 {
+    color: #063793;
+    font-weight: bold;
+    font-size: 3.2rem;
+    margin: 3.6rem 4.8rem 2rem 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+
+    span {
+      text-align: right;
+      white-space: nowrap; /* Keeps the content on a single line */
+      overflow: hidden;
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__mark {
+    height: 4rem;
+    width: 1rem;
+    background-color: #063793;
+    margin-left: 0.7rem;
+    position: relative;
+  }
+
+  &__content {
+    min-height: calc(100vh - 9.6rem);
+    position: relative;
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__titles {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 5rem 1rem 5rem;
+    align-items: center;
+  }
+
+  &__bookContainer {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    > img {
+      width: 58%;
+    }
+  }
+
+  &__part {
+    background-image: url("../../assets/bloco.svg");
+    width: 69%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7rem 9rem;
+  }
+
+  &__pageTitle {
+    color: #495e84;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 3rem 0;
+  }
+
+  &__pageParagraph {
+    color: #495e84;
+    font-size: 3rem;
+    line-height: 4rem;
+
+    &.small {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  &__pageImgContainer {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 46%;
+    }
+  }
+
+  &__page {
+    flex: 1;
+    text-align: left;
+
+    &.left {
+      div {
+        padding-right: 9rem;
+      }
+    }
+
+    &.right {
+      div:nth-child(1) {
+        padding-top: 4rem;
+      }
+
+      div {
+        padding-left: 12rem;
+      }
+    }
+  }
+}
