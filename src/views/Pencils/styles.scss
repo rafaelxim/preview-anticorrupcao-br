@@ -28,6 +28,7 @@
       white-space: nowrap; /* Keeps the content on a single line */
       overflow: hidden;
       padding-top: 0.5rem;
+      width: 0;
     }
   }
 
@@ -37,6 +38,8 @@
     background-color: #063793;
     margin-left: 0.7rem;
     position: relative;
+    right: -6rem;
+    opacity: 0;
   }
 
   &__content {
@@ -53,11 +56,19 @@
     align-items: center;
   }
 
+  &__air {
+    opacity: 0;
+    position: relative;
+    left: -10rem;
+  }
+
   &__bookContainer {
     flex: 1 1;
     display: flex;
     justify-content: center;
     position: relative;
+    top: 60rem;
+    opacity: 0;
 
     > img {
       width: 58%;
@@ -65,12 +76,12 @@
   }
 
   &__part {
-    background-image: url("../../assets/bloco.svg");
+    background-image: url("../../assets/bloco.png");
     width: 69%;
     display: flex;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 7rem 9rem;
+    padding: 7rem 9rem 0rem 9rem;
+    background-size: 100% 100%;
   }
 
   &__pageTitle {
@@ -78,12 +89,81 @@
     font-size: 3.5rem;
     font-weight: bold;
     margin: 3rem 0;
+
+    &.fromLeft {
+      left: -11rem;
+      position: relative;
+      opacity: 0;
+    }
+  }
+
+  &__tracos2 {
+    width: 24rem !important;
+  }
+
+  &__money2img {
+    opacity: 0;
+    margin-left: 7rem;
+  }
+
+  &__curtain {
+    width: 0;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  &__curtain2 {
+    width: 0;
+    overflow: hidden;
+    padding: 0 !important;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__tracosImg {
+    width: 50rem !important;
+  }
+
+  &__fadeIn {
+    opacity: 0;
   }
 
   &__pageParagraph {
     color: #495e84;
-    font-size: 3rem;
+    font-size: 2.7rem;
     line-height: 4rem;
+    top: 7rem;
+    position: relative;
+    opacity: 0;
+
+    ul {
+      padding-left: 3rem;
+
+      li {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &.big {
+      font-size: 3.7rem;
+      line-height: 5.9rem;
+    }
+
+    &.mb {
+      margin-bottom: 4rem;
+    }
+
+    &.p3 {
+      margin: 8rem 0;
+      line-height: 6rem;
+      font-weight: bold;
+    }
+
+    &.small2 {
+      font-size: 2.3rem;
+      line-height: 3rem;
+    }
 
     &.small {
       font-size: 2rem;
@@ -91,10 +171,26 @@
     }
   }
 
+  &__rpImg {
+    width: 76% !important;
+    opacity: 0;
+  }
+
   &__pageImgContainer {
     margin: 5rem 0;
     display: flex;
     justify-content: center;
+
+    &.p3 {
+      display: block;
+      // text-align: center;
+      justify-content: flex-start;
+    }
+
+    &.p3r {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
 
     img {
       width: 46%;
@@ -119,6 +215,19 @@
       div {
         padding-left: 12rem;
       }
+    }
+  }
+
+  &__actions {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    left: 0;
+
+    button {
+      margin: 4rem 7rem;
     }
   }
 }

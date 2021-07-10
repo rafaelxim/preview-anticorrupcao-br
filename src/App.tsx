@@ -12,6 +12,7 @@ export type Steps = {
   mobile: boolean;
   monitor: boolean;
   pencils: boolean;
+  paper: boolean;
 };
 
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
     mobile: false,
     monitor: false,
     pencils: false,
+    paper: false,
   });
 
   const completedStep = (step: string) => {
@@ -67,7 +69,10 @@ const App: React.FC = () => {
           animate={{ opacity: 1, transition: { duration: 1.2 } }}
           initial={{ opacity: 0 }}
         >
-          <Pencils />
+          <Pencils
+            onReturnHome={() => setCurrentView("home")}
+            onCompleteStep={(step) => completedStep(step)}
+          />
         </motion.div>
       )}
     </div>

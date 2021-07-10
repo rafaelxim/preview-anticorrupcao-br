@@ -67,6 +67,19 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           />
         )}
 
+        {highlight && steps.pencils && !steps.paper && (
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 1,
+              loop: Infinity,
+            }}
+            className="home__paperBlur"
+          />
+        )}
+
         <motion.img
           animate={{ opacity: 1, top: 0, transition: { duration: 2 } }}
           className="home__portaRetrato"
@@ -140,12 +153,13 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
             top: "24rem",
             transition: { duration: 2, delay: 0.3 },
           }}
-          className="home__pencils"
+          className={`home__pencils ${steps.pencils ? "withBorder" : ""}`}
           src={pencils}
           alt="pencils"
-          onClick={() =>
-            // steps.monitor && !steps.pencils ? clickedItem("pencils") : false
-            clickedItem("pencils")
+          onClick={
+            () =>
+              steps.monitor && !steps.pencils ? clickedItem("pencils") : false
+            // clickedItem("pencils")
           }
         />
         <motion.img

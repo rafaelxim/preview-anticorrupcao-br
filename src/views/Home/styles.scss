@@ -60,6 +60,11 @@
     top: 34rem;
     opacity: 0;
     cursor: pointer;
+
+    &.withBorder {
+      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
+        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
+    }
   }
 
   &__paper01 {
@@ -170,5 +175,16 @@
     left: 8%;
     position: absolute;
     top: 28rem;
+  }
+
+  &__paperBlur {
+    height: 35rem;
+    width: 22rem;
+    background: #063892;
+    border-radius: 21%;
+    filter: blur(32px);
+    left: 20%;
+    position: absolute;
+    top: 38rem;
   }
 }
