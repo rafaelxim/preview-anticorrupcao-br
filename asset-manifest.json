@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/preview-anticorrupcao-br/static/css/main.10b3192c.chunk.css",
-    "main.js": "/preview-anticorrupcao-br/static/js/main.60a5c9d8.chunk.js",
-    "main.js.map": "/preview-anticorrupcao-br/static/js/main.60a5c9d8.chunk.js.map",
+    "main.js": "/preview-anticorrupcao-br/static/js/main.a28b2d7b.chunk.js",
+    "main.js.map": "/preview-anticorrupcao-br/static/js/main.a28b2d7b.chunk.js.map",
     "runtime-main.js": "/preview-anticorrupcao-br/static/js/runtime-main.a6239d86.js",
     "runtime-main.js.map": "/preview-anticorrupcao-br/static/js/runtime-main.a6239d86.js.map",
     "static/js/2.3d238db6.chunk.js": "/preview-anticorrupcao-br/static/js/2.3d238db6.chunk.js",
@@ -12,7 +12,6 @@
     "static/js/2.3d238db6.chunk.js.LICENSE.txt": "/preview-anticorrupcao-br/static/js/2.3d238db6.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/preview-anticorrupcao-br/static/media/Metropolis-Regular.67a1988d.otf",
     "static/media/air.4ebebd4b.svg": "/preview-anticorrupcao-br/static/media/air.4ebebd4b.svg",
-    "static/media/anticorrupcao_logo.48fe8d78.svg": "/preview-anticorrupcao-br/static/media/anticorrupcao_logo.48fe8d78.svg",
     "static/media/styles.scss": "/preview-anticorrupcao-br/static/media/wood.f3a44027.svg",
     "static/media/board.fafb8012.png": "/preview-anticorrupcao-br/static/media/board.fafb8012.png",
     "static/media/brMalls_logo.1020687c.svg": "/preview-anticorrupcao-br/static/media/brMalls_logo.1020687c.svg",
@@ -47,6 +46,6 @@
     "static/js/runtime-main.a6239d86.js",
     "static/js/2.3d238db6.chunk.js",
     "static/css/main.10b3192c.chunk.css",
-    "static/js/main.60a5c9d8.chunk.js"
+    "static/js/main.a28b2d7b.chunk.js"
   ]
 }
