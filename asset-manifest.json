@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/preview-anticorrupcao-br/static/css/main.10b3192c.chunk.css",
-    "main.js": "/preview-anticorrupcao-br/static/js/main.a28b2d7b.chunk.js",
-    "main.js.map": "/preview-anticorrupcao-br/static/js/main.a28b2d7b.chunk.js.map",
+    "main.css": "/preview-anticorrupcao-br/static/css/main.c28b150c.chunk.css",
+    "main.js": "/preview-anticorrupcao-br/static/js/main.4539a34c.chunk.js",
+    "main.js.map": "/preview-anticorrupcao-br/static/js/main.4539a34c.chunk.js.map",
     "runtime-main.js": "/preview-anticorrupcao-br/static/js/runtime-main.a6239d86.js",
     "runtime-main.js.map": "/preview-anticorrupcao-br/static/js/runtime-main.a6239d86.js.map",
     "static/js/2.3d238db6.chunk.js": "/preview-anticorrupcao-br/static/js/2.3d238db6.chunk.js",
     "static/js/2.3d238db6.chunk.js.map": "/preview-anticorrupcao-br/static/js/2.3d238db6.chunk.js.map",
     "index.html": "/preview-anticorrupcao-br/index.html",
-    "static/css/main.10b3192c.chunk.css.map": "/preview-anticorrupcao-br/static/css/main.10b3192c.chunk.css.map",
+    "static/css/main.c28b150c.chunk.css.map": "/preview-anticorrupcao-br/static/css/main.c28b150c.chunk.css.map",
     "static/js/2.3d238db6.chunk.js.LICENSE.txt": "/preview-anticorrupcao-br/static/js/2.3d238db6.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/preview-anticorrupcao-br/static/media/Metropolis-Regular.67a1988d.otf",
     "static/media/air.4ebebd4b.svg": "/preview-anticorrupcao-br/static/media/air.4ebebd4b.svg",
@@ -29,6 +29,7 @@
     "static/media/monitor.6d7cd923.png": "/preview-anticorrupcao-br/static/media/monitor.6d7cd923.png",
     "static/media/monitor.c4e0b53e.svg": "/preview-anticorrupcao-br/static/media/monitor.c4e0b53e.svg",
     "static/media/mouse.304330a0.png": "/preview-anticorrupcao-br/static/media/mouse.304330a0.png",
+    "static/media/paper.7e990a04.png": "/preview-anticorrupcao-br/static/media/paper.7e990a04.png",
     "static/media/paper01.63daea44.png": "/preview-anticorrupcao-br/static/media/paper01.63daea44.png",
     "static/media/pencils.e8bab4f3.png": "/preview-anticorrupcao-br/static/media/pencils.e8bab4f3.png",
     "static/media/play.75eb2134.svg": "/preview-anticorrupcao-br/static/media/play.75eb2134.svg",
@@ -45,7 +46,7 @@
   "entrypoints": [
     "static/js/runtime-main.a6239d86.js",
     "static/js/2.3d238db6.chunk.js",
-    "static/css/main.10b3192c.chunk.css",
-    "static/js/main.a28b2d7b.chunk.js"
+    "static/css/main.c28b150c.chunk.css",
+    "static/js/main.4539a34c.chunk.js"
   ]
 }
