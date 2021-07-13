@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/brMalls_logo.svg";
-import logoAnticorrup from "../../assets/anticorrupcao_logo.svg";
+import logoAnticorrup from "../../assets/anticorrupcao.png";
 import "./styles.scss";
 
 const Header: React.FC = () => {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "../../components/Header";
 import lapisImg from "../../assets/lapis.png";
+import paperImg from "../../assets/paper.png";
 import moneyHandImg from "../../assets/money_hand.svg";
 import stakeholders from "../../assets/stakeholders.svg";
 import trofeuImg from "../../assets/trofeu.svg";
@@ -22,7 +23,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const onClickForward = () => {
-    if (currentPage === 5) {
+    if (currentPage === 6) {
       onCompleteStep("pencils");
     } else {
       setCurrentPage(currentPage + 1);
@@ -90,7 +91,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     opacity: 1,
                     transition: { duration: 0.8, delay: 2.6 },
                   }}
-                  className="pencils__pageParagraph"
+                  className="pencils__pageParagraph halfPage"
                 >
                   Como será que nós atuamos no combate e prevenção à corrupção?
                 </motion.div>
@@ -113,7 +114,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     opacity: 1,
                     transition: { duration: 0.8, delay: 4 },
                   }}
-                  className="pencils__pageParagraph big"
+                  className="pencils__pageParagraph"
                 >
                   Praticamos os mais altos padrões éticos e nos preocupamos e
                   cuidamos para sermos reconhecidos como uma empresa que preza
@@ -164,9 +165,10 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                   }}
                   className="pencils__pageParagraph"
                 >
-                  E por fim, valorizamos nossa reputação frente aos nossos
-                  stakeholders* e por isso não toleramos práticas corruptas em
-                  nossos negócios e relacionamentos.
+                  E por fim, valorizamos nossa reputação frente aos nossos{" "}
+                  <span className="pencils__asterisk">stakeholders*</span> e por
+                  isso não toleramos práticas corruptas em nossos negócios e
+                  relacionamentos.
                 </motion.div>
                 <div className="pencils__pageImgContainer">
                   <motion.img
@@ -185,7 +187,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     opacity: 1,
                     transition: { duration: 0.8, delay: 3.4 },
                   }}
-                  className="pencils__pageParagraph small"
+                  className="pencils__pageParagraph asterisk"
                 >
                   <b>*Stakeholders:</b> Agentes internos ou externos que
                   influenciam ou sofrem influência da empresa.
@@ -244,7 +246,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     left: 0,
                     transition: { duration: 0.8, delay: 5.2 },
                   }}
-                  className="pencils__pageTitle fromLeft"
+                  className="pencils__pageTitle fromLeft sm"
                 >
                   Brindes e Presentes
                 </motion.div>
@@ -312,7 +314,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     opacity: 1,
                     transition: { duration: 0.8, delay: 0.8 },
                   }}
-                  className="pencils__pageTitle fromLeft"
+                  className="pencils__pageTitle fromLeft sm"
                 >
                   Patrocínios e Doações
                 </motion.div>
@@ -322,7 +324,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     top: 0,
                     transition: { duration: 0.8, delay: 1.6 },
                   }}
-                  className="pencils__pageParagraph"
+                  className="pencils__pageParagraph small"
                 >
                   <ul>
                     <li>
@@ -350,7 +352,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     left: 0,
                     transition: { duration: 0.8, delay: 2.4 },
                   }}
-                  className="pencils__pageTitle fromLeft"
+                  className="pencils__pageTitle fromLeft sm"
                 >
                   Diligências de Terceiros
                 </motion.div>
@@ -360,7 +362,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     top: 0,
                     transition: { duration: 0.8, delay: 3 },
                   }}
-                  className="pencils__pageParagraph"
+                  className="pencils__pageParagraph small"
                 >
                   <ul>
                     <li>
@@ -395,7 +397,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     left: 0,
                     transition: { duration: 0.8, delay: 0.8 },
                   }}
-                  className="pencils__pageTitle fromLeft"
+                  className="pencils__pageTitle fromLeft sm2"
                 >
                   Relacionamento com o Poder Público
                 </motion.div>
@@ -435,10 +437,10 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                 <motion.div
                   animate={{
                     opacity: 1,
-                    top: 0,
+                    left: 0,
                     transition: { duration: 0.8, delay: 3 },
                   }}
-                  className="pencils__pageParagraph mb"
+                  className="pencils__pageTitle fromLeft sm2"
                 >
                   Reuniões com Agentes Públicos, inclusive atendimento de
                   fiscalizações devem:
@@ -469,6 +471,57 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
             </div>
           )}
           {/* ------------------------- END PART 5 ------------------------ */}
+
+          {/* ------------------------- PART 6 ------------------------ */}
+          {currentPage === 6 && (
+            <div className="pencils__part">
+              <div className="pencils__page left">
+                <motion.div
+                  animate={{
+                    opacity: 1,
+                    left: 0,
+                    transition: { duration: 0.8, delay: 0.8 },
+                  }}
+                  className="pencils__pageTitle fromLeft sm2"
+                >
+                  Exatidão de Livros, Registros e Documentos
+                </motion.div>
+                <motion.div
+                  animate={{
+                    opacity: 1,
+                    top: 0,
+                    transition: { duration: 0.8, delay: 1.6 },
+                  }}
+                  className="pencils__pageParagraph"
+                >
+                  <ul>
+                    <li>
+                      Não é permitida a falsificação de livros e registros
+                      contábeis, ou qualquer declaração falsa ou omissões de
+                      fatos relevantes, objetivando dissimular ou ocultar
+                      quaisquer pagamentos realizados ou recebidos.
+                    </li>
+                    <li>
+                      Não é permitida a fraude de documentos, sejam internos ou
+                      públicos da Companhia.
+                    </li>
+                  </ul>
+                </motion.div>
+              </div>
+              <div className="pencils__page right">
+                <motion.img
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.8, delay: 2.2 },
+                  }}
+                  src={paperImg}
+                  alt="rp"
+                  className="pencils__lsImg"
+                />
+              </div>
+            </div>
+          )}
+          {/* ------------------------- END PART 6 ------------------------ */}
         </motion.div>
       </div>
 

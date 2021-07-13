@@ -7,6 +7,10 @@
   position: relative;
   overflow: hidden;
 
+  * {
+    font-family: ChalkBoard;
+  }
+
   &__lapis {
     position: absolute;
     left: 1%;
@@ -29,6 +33,7 @@
       overflow: hidden;
       padding-top: 0.5rem;
       width: 0;
+      font-family: Metropolis;
     }
   }
 
@@ -54,6 +59,15 @@
     justify-content: flex-end;
     padding: 2rem 5rem 1rem 5rem;
     align-items: center;
+  }
+
+  &__lsImg {
+    margin: auto;
+    display: block;
+    margin-top: 23rem;
+    padding-left: 7rem;
+    opacity: 0;
+    width: 40rem;
   }
 
   &__air {
@@ -85,10 +99,17 @@
   }
 
   &__pageTitle {
-    color: #495e84;
-    font-size: 3.5rem;
-    font-weight: bold;
+    color: #063793;
+    font-size: 7.3rem;
     margin: 3rem 0;
+
+    &.sm {
+      font-size: 6rem;
+    }
+
+    &.sm2 {
+      font-size: 4.3rem;
+    }
 
     &.fromLeft {
       left: -11rem;
@@ -129,13 +150,27 @@
     opacity: 0;
   }
 
+  &__asterisk {
+    color: #063793;
+    text-decoration: underline;
+  }
+
   &__pageParagraph {
-    color: #495e84;
-    font-size: 2.7rem;
-    line-height: 4rem;
+    color: #000;
+    font-size: 4rem;
+    // line-height: 5rem;
     top: 7rem;
     position: relative;
     opacity: 0;
+
+    &.asterisk {
+      font-size: 3.8rem;
+      color: #063793;
+    }
+
+    &.halfPage {
+      padding-right: 36rem !important;
+    }
 
     ul {
       padding-left: 3rem;
@@ -157,17 +192,15 @@
     &.p3 {
       margin: 8rem 0;
       line-height: 6rem;
-      font-weight: bold;
+      padding-right: 20rem;
     }
 
     &.small2 {
-      font-size: 2.3rem;
-      line-height: 3rem;
+      font-size: 3.1rem;
     }
 
     &.small {
-      font-size: 2rem;
-      line-height: 2.3rem;
+      font-size: 3.6rem;
     }
   }
 
@@ -208,9 +241,9 @@
     }
 
     &.right {
-      div:nth-child(1) {
-        padding-top: 4rem;
-      }
+      // div:nth-child(1) {
+      //   padding-top: 4rem;
+      // }
 
       div {
         padding-left: 12rem;
