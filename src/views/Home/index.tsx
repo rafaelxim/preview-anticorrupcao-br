@@ -80,6 +80,19 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           />
         )}
 
+        {highlight && steps.paper && !steps.phone && (
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 1,
+              loop: Infinity,
+            }}
+            className="home__phoneBlur"
+          />
+        )}
+
         <motion.img
           animate={{ opacity: 1, top: 0, transition: { duration: 2 } }}
           className="home__portaRetrato"
@@ -122,6 +135,7 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
             top: 0,
             transition: { duration: 2, delay: 2.3 },
           }}
+          whileHover={steps.paper && !steps.phone ? { scale: 1.3 } : {}}
           className="home__tel"
           src={tel}
           alt="tel"
@@ -143,10 +157,16 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
             top: "26rem",
             transition: { duration: 2, delay: 0.7 },
           }}
-          className="home__paper01"
+          className={`home__paper01 ${steps.paper ? "withBorder" : ""}`}
           src={paper01}
           alt="paper01"
+          whileHover={steps.pencils && !steps.paper ? { scale: 1.3 } : {}}
+          onClick={() =>
+            // steps.pencils && !steps.paper ? clickedItem("paper") : false
+            clickedItem("paper")
+          }
         />
+
         <motion.img
           animate={{
             opacity: 1,
@@ -154,11 +174,13 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
             transition: { duration: 2, delay: 0.3 },
           }}
           className={`home__pencils ${steps.pencils ? "withBorder" : ""}`}
+          whileHover={steps.monitor && !steps.pencils ? { scale: 1.3 } : {}}
           src={pencils}
           alt="pencils"
-          onClick={() =>
-            // steps.monitor && !steps.pencils ? clickedItem("pencils") : false
-            clickedItem("pencils")
+          onClick={
+            () =>
+              steps.monitor && !steps.pencils ? clickedItem("pencils") : false
+            // clickedItem("pencils")
           }
         />
         <motion.img

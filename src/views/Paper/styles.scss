@@ -1,0 +1,417 @@
+.paper {
+  min-height: 100vh;
+  background-color: #31c6d3;
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem 1rem 5rem;
+    align-items: center;
+  }
+
+  &__title1 {
+    background: #00959c;
+    padding: 1.5rem 3rem;
+    font-size: 4rem;
+    color: #fff;
+    border-left: 1.3rem solid #063793;
+    display: flex;
+    position: relative;
+    opacity: 0;
+    left: -10rem;
+
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  &__note1 {
+    width: 35rem;
+    left: 25%;
+    top: 31%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__note1Text {
+    left: 28%;
+    position: absolute;
+    top: 46%;
+    font-size: 3.1rem;
+    width: 31rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__note2 {
+    width: 27rem;
+    left: 10%;
+    top: 7%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__note2Text {
+    left: 11%;
+    position: absolute;
+    top: 21%;
+    font-size: 2.6rem;
+    width: 25rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__title2 {
+    color: #063793;
+    font-weight: bold;
+    font-size: 3.2rem;
+    margin: 5.6rem 4.8rem 4rem 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+
+    span {
+      text-align: right;
+      white-space: nowrap; /* Keeps the content on a single line */
+      overflow: hidden;
+      padding-top: 0.5rem;
+      width: 0;
+    }
+  }
+
+  &__mark {
+    height: 4rem;
+    width: 1rem;
+    background-color: #063793;
+    margin-left: 0.7rem;
+    position: relative;
+    opacity: 0;
+    right: -9rem;
+  }
+
+  &__board {
+    background-image: url("../../assets/board2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 85rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__boardItem {
+    display: inline-block;
+    flex: 1 0 32%;
+    position: relative;
+    opacity: 0;
+    top: -15rem;
+
+    &.pending {
+      opacity: 0;
+    }
+  }
+
+  &__foto02 {
+    position: absolute;
+    top: 30%;
+    left: 11%;
+    width: 41rem;
+    cursor: pointer;
+  }
+
+  &__bbBlock {
+    width: 19rem;
+    position: absolute;
+    top: 39%;
+    left: 20%;
+  }
+
+  &__foto01 {
+    position: absolute;
+    width: 42rem;
+    left: 25%;
+    cursor: pointer;
+  }
+
+  &__foto03 {
+    width: 34rem;
+    position: absolute;
+    top: 17%;
+    left: 21%;
+    cursor: pointer;
+  }
+
+  &__noteblock {
+    position: absolute;
+    top: 71%;
+    left: 43%;
+    transform: rotate(-13deg);
+
+    &.mod2 {
+      top: 45%;
+      left: 43%;
+      transform: unset;
+    }
+
+    &.mod3 {
+      top: 49%;
+      left: 62%;
+      transform: unset;
+    }
+
+    img {
+      width: 23rem;
+      cursor: pointer;
+    }
+
+    p {
+      position: absolute;
+      top: 5.9rem;
+      left: 3.4rem;
+      color: white;
+      font-size: 2.6rem;
+      width: 16rem;
+    }
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000a3;
+  }
+
+  &__modalContent {
+    background: #fff7de;
+    position: absolute;
+    left: 8%;
+    top: 16%;
+    bottom: 5%;
+    right: 8%;
+    border-top-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+    display: flex;
+    transform: scale(0.2);
+
+    &.block {
+      display: block;
+    }
+  }
+
+  &__modalClose {
+    position: absolute;
+    right: 6rem;
+    width: 5rem;
+    top: 5rem;
+    cursor: pointer;
+  }
+
+  &__modalRight {
+    flex: 1 0 75%;
+    padding: 4rem 18rem 4rem 0;
+  }
+
+  &__modalLeft {
+    flex: 1 0 15%;
+
+    > img:nth-child(1) {
+      width: 25rem;
+      position: absolute;
+      left: -5rem;
+      // top: 12rem;
+      // transform: rotate(12deg);
+    }
+
+    > img:nth-child(2) {
+      position: absolute;
+      width: 20rem;
+      left: 6rem;
+      // top: 23rem;
+      // transform: rotate(-17deg);
+    }
+
+    > img:nth-child(3) {
+      width: 20rem;
+      // top: 56rem;
+      position: absolute;
+      left: 4rem;
+      // transform: rotate(16deg);
+    }
+
+    > img:nth-child(4) {
+      width: 23rem;
+      position: absolute;
+      // top: 54rem;
+      // transform: rotate(-10deg);
+      left: 12rem;
+    }
+  }
+
+  &__modalBold {
+    position: relative;
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+
+  &__modalList {
+    font-size: 3.5rem;
+    padding-left: 3rem;
+    position: relative;
+
+    &.with-exclamation {
+      list-style: none;
+
+      li::before {
+        content: "";
+        background-image: url("../../assets/boardImgs/att.png");
+        position: relative;
+        top: 0.5rem;
+        margin-right: 2rem;
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        background-size: 100% 100%;
+      }
+    }
+
+    li {
+      margin: 7rem 0;
+    }
+  }
+
+  .wpt {
+    padding-top: 5rem;
+  }
+
+  &__modal2Img {
+    position: relative;
+    width: 41rem;
+    top: -3rem;
+    transform: rotate(-22deg);
+    left: -4rem;
+    display: inline-block;
+  }
+
+  &__modalQuestionText {
+    display: inline-block;
+    font-size: 4.2rem;
+    width: 68%;
+    top: -6rem;
+    position: relative;
+    font-weight: bold;
+  }
+
+  &__modalAnswers {
+    position: relative;
+    margin: 2rem 20rem 2rem 16rem;
+  }
+
+  &__answer {
+    background: #ffd8a3;
+    margin: 4rem 0;
+    padding: 1.7rem 14rem;
+    font-size: 3.8rem;
+    cursor: pointer;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+
+    &.sm {
+      margin: 2.6rem 0;
+      font-size: 3.2rem;
+    }
+
+    &.choosen {
+      background-color: #ff5b22;
+      color: #fff;
+    }
+
+    &.correct {
+      background-color: #00959c;
+      color: #fff;
+    }
+  }
+
+  &__actions {
+    text-align: center;
+
+    button {
+      border: none;
+      background-color: #31c6d3;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 1.5rem 15rem;
+      font-size: 3.8rem;
+      border-radius: 25rem;
+      cursor: pointer;
+    }
+  }
+
+  &__actions2 {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+
+  &__ball {
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    background-color: #31c6d3;
+    margin: 0 2rem;
+    border-radius: 100%;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &.selected {
+      opacity: 1;
+    }
+  }
+
+  &__check1 {
+    position: absolute;
+    top: 78%;
+    left: 67%;
+    width: 7rem;
+  }
+
+  &__check2 {
+    position: absolute;
+    top: 38%;
+    width: 7rem;
+    left: 68%;
+  }
+
+  &__check3 {
+    position: absolute;
+    top: 46%;
+    width: 7rem;
+    left: 83%;
+  }
+
+  &__check4 {
+    position: absolute;
+    top: 12%;
+    width: 7rem;
+    left: 68%;
+  }
+
+  &__check5 {
+    position: absolute;
+    top: 40%;
+    width: 7rem;
+    left: 48%;
+  }
+
+  &__paginations {
+    position: fixed;
+    bottom: 4rem;
+    right: 5rem;
+  }
+}

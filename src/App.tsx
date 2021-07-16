@@ -5,6 +5,7 @@ import Welcome from "./views/Welcome";
 import Home from "./views/Home";
 import Mobile from "./views/Mobile";
 import Pencils from "./views/Pencils";
+import Paper from "./views/Paper";
 import "./App.scss";
 import Monitor from "./views/Monitor";
 
@@ -13,6 +14,7 @@ export type Steps = {
   monitor: boolean;
   pencils: boolean;
   paper: boolean;
+  phone: boolean;
 };
 
 const App: React.FC = () => {
@@ -22,6 +24,7 @@ const App: React.FC = () => {
     monitor: false,
     pencils: false,
     paper: false,
+    phone: false,
   });
 
   const completedStep = (step: string) => {
@@ -73,6 +76,12 @@ const App: React.FC = () => {
             onReturnHome={() => setCurrentView("home")}
             onCompleteStep={(step) => completedStep(step)}
           />
+        </motion.div>
+      )}
+
+      {currentView === "paper" && (
+        <motion.div>
+          <Paper onCompleteStep={(step) => completedStep(step)} />
         </motion.div>
       )}
     </div>
