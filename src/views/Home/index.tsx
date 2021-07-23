@@ -93,11 +93,29 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           />
         )}
 
+        {highlight && steps.phone && !steps.retrato && (
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 1,
+              loop: Infinity,
+            }}
+            className="home__retratoBlur"
+          />
+        )}
+
         <motion.img
           animate={{ opacity: 1, top: 0, transition: { duration: 2 } }}
-          className="home__portaRetrato"
+          className={`home__portaRetrato ${steps.retrato ? "withBorder" : ""}`}
           src={portaRetrato}
           alt="portaRetrato"
+          onClick={
+            () =>
+              steps.phone && !steps.retrato ? clickedItem("retrato") : false
+            // clickedItem("retrato")
+          }
         />
         <motion.img
           animate={{
@@ -136,7 +154,11 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
             transition: { duration: 2, delay: 2.3 },
           }}
           whileHover={steps.paper && !steps.phone ? { scale: 1.3 } : {}}
-          className="home__tel"
+          className={`home__tel ${steps.phone ? "withBorder" : ""}`}
+          onClick={
+            () => (steps.paper && !steps.phone ? clickedItem("phone") : false)
+            // clickedItem("phone")
+          }
           src={tel}
           alt="tel"
         />
@@ -161,9 +183,9 @@ const Home: React.FC<Props> = ({ clickedItem, steps }) => {
           src={paper01}
           alt="paper01"
           whileHover={steps.pencils && !steps.paper ? { scale: 1.3 } : {}}
-          onClick={() =>
-            // steps.pencils && !steps.paper ? clickedItem("paper") : false
-            clickedItem("paper")
+          onClick={
+            () => (steps.pencils && !steps.paper ? clickedItem("paper") : false)
+            // clickedItem("paper")
           }
         />
 

@@ -27,11 +27,11 @@
     left: 30%;
     z-index: 2;
     cursor: pointer;
+  }
 
-    &.withBorder {
-      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
-        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
-    }
+  .withBorder {
+    filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
+      drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
   }
 
   &__fone {
@@ -60,11 +60,6 @@
     top: 34rem;
     opacity: 0;
     cursor: pointer;
-
-    &.withBorder {
-      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
-        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
-    }
   }
 
   &__paper01 {
@@ -74,11 +69,6 @@
     top: 36rem;
     opacity: 0;
     cursor: pointer;
-
-    &.withBorder {
-      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
-        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
-    }
   }
 
   &__board {
@@ -124,11 +114,6 @@
     top: 60rem;
     opacity: 0;
     cursor: pointer;
-
-    &.withBorder {
-      filter: drop-shadow(2px 2px 0 #3c79e9) drop-shadow(-2px 2px 0 #3c79e9)
-        drop-shadow(2px -2px 0 #3c79e9) drop-shadow(-2px -2px 0 #3c79e9);
-    }
   }
 
   &__action {
@@ -158,6 +143,17 @@
     left: 79%;
     position: absolute;
     top: 51rem;
+  }
+
+  &__retratoBlur {
+    height: 18rem;
+    width: 20rem;
+    background: #063892;
+    border-radius: 50%;
+    filter: blur(25px);
+    left: 12.2%;
+    position: absolute;
+    top: 4rem;
   }
 
   &__phoneBlur {

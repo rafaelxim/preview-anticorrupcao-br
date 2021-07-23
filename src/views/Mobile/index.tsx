@@ -119,7 +119,7 @@ const Mobile: React.FC<Props> = ({ returnHomeClick, onCompleteSmartPhone }) => {
           animate={{ opacity: 1, transition: { duration: 1 } }}
           className="mobile2"
         >
-          {isVideoVisible && !viewedVideo && (
+          {isVideoVisible && (
             <div className="mobile2__videoContainer">
               <video
                 width="750"

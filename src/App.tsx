@@ -8,6 +8,8 @@ import Pencils from "./views/Pencils";
 import Paper from "./views/Paper";
 import "./App.scss";
 import Monitor from "./views/Monitor";
+import Phone from "./views/Phone";
+import Retrato from "./views/Retrato";
 
 export type Steps = {
   mobile: boolean;
@@ -15,6 +17,7 @@ export type Steps = {
   pencils: boolean;
   paper: boolean;
   phone: boolean;
+  retrato: boolean;
 };
 
 const App: React.FC = () => {
@@ -25,6 +28,7 @@ const App: React.FC = () => {
     pencils: false,
     paper: false,
     phone: false,
+    retrato: false,
   });
 
   const completedStep = (step: string) => {
@@ -82,6 +86,18 @@ const App: React.FC = () => {
       {currentView === "paper" && (
         <motion.div>
           <Paper onCompleteStep={(step) => completedStep(step)} />
+        </motion.div>
+      )}
+
+      {currentView === "phone" && (
+        <motion.div>
+          <Phone onCompleteStep={(step) => completedStep(step)} />
+        </motion.div>
+      )}
+
+      {currentView === "retrato" && (
+        <motion.div>
+          <Retrato onCompleteStep={(step) => completedStep(step)} />
         </motion.div>
       )}
     </div>

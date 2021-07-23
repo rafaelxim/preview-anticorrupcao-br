@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="195.037" height="195.037" viewBox="0 0 195.037 195.037">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.182" y1="0.816" x2="0.993" y2="0.009" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a50b5"/>
+      <stop offset="0.478" stop-color="#063793"/>
+      <stop offset="1" stop-color="#002b7b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.708" y1="0.298" x2="0.453" y2="0.546" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#002b7c"/>
+      <stop offset="1" stop-color="#063793"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-0.039" y1="5.23" x2="0.771" y2="-1.881" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a53bf"/>
+      <stop offset="1" stop-color="#063793"/>
+    </linearGradient>
+  </defs>
+  <g id="postit-blue" transform="translate(43.463) rotate(16)">
+    <path id="Caminho_2299" data-name="Caminho 2299" d="M157.682,157.682h-58.7c-23.285,0-41.534-4.6-48.794-8.13-.166-.081-10.316-8.285-22.337-19.726-9.632-9.167-21.195-23.605-21.876-25.393C1.865,93.639,0,87,0,69.638V0H157.682Z" fill="url(#linear-gradient)"/>
+    <path id="Caminho_2300" data-name="Caminho 2300" d="M17.524,22.533C4.835,9.534,0,0,0,0A22.262,22.262,0,0,0,25.358,6.989S29.71,34.72,44.213,45.119A200.947,200.947,0,0,1,17.524,22.533Z" transform="translate(5.979 104.433)" fill="url(#linear-gradient-2)"/>
+    <path id="Caminho_2301" data-name="Caminho 2301" d="M0,17.907H157.682V0H0Z" fill="url(#linear-gradient-3)"/>
+  </g>
+</svg>

@@ -27,11 +27,12 @@
   }
 
   &__note1 {
-    width: 35rem;
+    width: 37rem;
     left: 25%;
-    top: 31%;
+    top: 21%;
     position: absolute;
     cursor: pointer;
+    transform: scaleY(0.8);
   }
 
   &__note1Text {
@@ -48,7 +49,7 @@
   &__note2 {
     width: 27rem;
     left: 10%;
-    top: 7%;
+    top: -29%;
     position: absolute;
     cursor: pointer;
   }
@@ -56,7 +57,7 @@
   &__note2Text {
     left: 11%;
     position: absolute;
-    top: 21%;
+    top: -6%;
     font-size: 2.6rem;
     width: 25rem;
     text-align: center;
@@ -146,7 +147,7 @@
 
   &__noteblock {
     position: absolute;
-    top: 71%;
+    top: 62%;
     left: 43%;
     transform: rotate(-13deg);
 
@@ -157,20 +158,21 @@
     }
 
     &.mod3 {
-      top: 49%;
-      left: 62%;
+      top: 37%;
+      left: 53%;
       transform: unset;
     }
 
     img {
-      width: 23rem;
+      width: 24.9rem;
       cursor: pointer;
+      transform: rotate(-15.4deg) scaleY(0.8);
     }
 
     p {
       position: absolute;
-      top: 5.9rem;
-      left: 3.4rem;
+      top: 7.9rem;
+      left: 5rem;
       color: white;
       font-size: 2.6rem;
       width: 16rem;
@@ -191,12 +193,16 @@
     position: absolute;
     left: 8%;
     top: 16%;
-    bottom: 5%;
+    bottom: 2%;
     right: 8%;
     border-top-right-radius: 7rem;
     border-bottom-left-radius: 7rem;
     display: flex;
     transform: scale(0.2);
+
+    @media only screen and (max-width: 1367px) {
+      bottom: 9%;
+    }
 
     &.block {
       display: block;
@@ -213,7 +219,11 @@
 
   &__modalRight {
     flex: 1 0 75%;
-    padding: 4rem 18rem 4rem 0;
+    padding: 2rem 0 0 0;
+
+    @media only screen and (max-width: 1367px) {
+      padding: 4rem 18rem 4rem 0;
+    }
   }
 
   &__modalLeft {
@@ -250,6 +260,14 @@
       // transform: rotate(-10deg);
       left: 12rem;
     }
+  }
+
+  &__rightArr {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    width: 3rem;
+    cursor: pointer;
   }
 
   &__modalBold {
@@ -381,6 +399,59 @@
     width: 7rem;
   }
 
+  &__boardBlur {
+    height: 18rem;
+    width: 18rem;
+    background: #063892;
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    &.position1 {
+      height: 22rem;
+      width: 32rem;
+      left: 18%;
+      top: 44rem;
+    }
+
+    &.position2 {
+      height: 22rem;
+      width: 32rem;
+      left: 41%;
+      top: 44rem;
+    }
+
+    &.position3 {
+      height: 22rem;
+      width: 32rem;
+      left: 19%;
+      top: 76rem;
+    }
+
+    &.position4 {
+      height: 22rem;
+      width: 32rem;
+      left: 42%;
+      top: 76rem;
+    }
+
+    &.position5 {
+      height: 22rem;
+      width: 32rem;
+      left: 65%;
+      top: 59rem;
+    }
+
+    &.position6 {
+      display: none;
+    }
+  }
+
   &__check2 {
     position: absolute;
     top: 38%;
@@ -404,7 +475,7 @@
 
   &__check5 {
     position: absolute;
-    top: 40%;
+    top: 22%;
     width: 7rem;
     left: 48%;
   }

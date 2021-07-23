@@ -1,0 +1,132 @@
+.phone {
+  height: 100vh;
+  background-image: url("../../assets/bg00201.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  &__site {
+    color: #495e84;
+    font-size: 3.2rem;
+    margin-top: 2rem;
+
+    img {
+      width: 2.1rem;
+      margin-right: 4rem;
+      position: relative;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+
+  &__tel {
+    font-size: 4.5rem;
+    color: #495e84;
+
+    img {
+      width: 3.5rem;
+      margin-right: 2rem;
+    }
+  }
+
+  &__rightUp {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__rightBottom {
+    background-color: #fff5e6;
+    border: 0.7rem dashed #ffad36;
+    margin-right: 5rem;
+    padding: 4rem 3rem;
+    opacity: 0;
+    bottom: -15rem;
+  }
+
+  &__descImg img {
+    width: 40rem;
+    margin-top: 12rem;
+
+    @media only screen and (max-width: 1367px) {
+      margin-top: 18rem;
+    }
+  }
+
+  &__description2 {
+    color: #495e84;
+    font-size: 3.4rem;
+    position: relative;
+    left: -15rem;
+    opacity: 0;
+  }
+
+  &__title2 {
+    color: #063793;
+    font-weight: bold;
+    font-size: 3.2rem;
+    margin: 5.6rem 4.8rem 4rem 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+
+    span {
+      width: 0;
+      text-align: right;
+      white-space: nowrap; /* Keeps the content on a single line */
+      overflow: hidden;
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__mark {
+    height: 4rem;
+    width: 1rem;
+    background-color: #063793;
+    margin-left: 0.7rem;
+    position: relative;
+    right: -4rem;
+    opacity: 0;
+  }
+
+  &__actions {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+
+    button {
+      opacity: 0;
+    }
+  }
+
+  &__description {
+    padding: 10rem 48rem 5rem 4rem;
+    font-size: 3.3rem;
+    color: #fff;
+    line-height: 5rem;
+    position: relative;
+    top: -12rem;
+    opacity: 0;
+
+    @media only screen and (max-width: 1367px) {
+      font-size: 3.6rem;
+      line-height: 5.7rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    min-height: calc(100vh - 9.6rem);
+  }
+
+  &__left {
+    flex: 1 0 60%;
+    background-color: rgba(0, 149, 156, 0.8);
+    opacity: 0.8;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+  }
+
+  &__right {
+    flex: 1 0 40%;
+  }
+}

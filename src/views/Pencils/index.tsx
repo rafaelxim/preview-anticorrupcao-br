@@ -246,7 +246,7 @@ const Pencils: React.FC<Props> = ({ onCompleteStep, onReturnHome }) => {
                     left: 0,
                     transition: { duration: 0.8, delay: 5.2 },
                   }}
-                  className="pencils__pageTitle fromLeft sm"
+                  className="pencils__pageTitle fromLeft sm no-margin-top"
                 >
                   Brindes e Presentes
                 </motion.div>

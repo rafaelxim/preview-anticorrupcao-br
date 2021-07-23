@@ -196,7 +196,8 @@
     }
 
     &.small2 {
-      font-size: 3.1rem;
+      font-size: 4rem;
+      line-height: 4.8rem;
     }
 
     &.small {
@@ -262,5 +263,9 @@
     button {
       margin: 4rem 7rem;
     }
+  }
+
+  .no-margin-top {
+    margin-top: 0;
   }
 }

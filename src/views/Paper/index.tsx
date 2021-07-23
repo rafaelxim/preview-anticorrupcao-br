@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "../../components/Header";
-import noteImg from "../../assets/boardImgs/note1.png";
+import noteImg from "../../assets/boardImgs/postit-orange.svg";
 import foto03Img from "../../assets/boardImgs/foto_03.png";
 import foto02Img from "../../assets/boardImgs/foto_02.png";
 import foto01Img from "../../assets/boardImgs/foto_01.png";
-import notebImg from "../../assets/boardImgs/noteb.png";
+import notebImg from "../../assets/boardImgs/postit-blue.svg";
 import babyBlockImg from "../../assets/boardImgs/babyblock.png";
 import checkImg from "../../assets/boardImgs/check2.png";
+import rightArrImg from "../../assets/boardImgs/arrRight.png";
 import closeImg from "../../assets/close.svg";
 import "./styles.scss";
 import PaginationButton from "../../components/Buttons/PaginationButton";
@@ -34,6 +35,7 @@ const Paper: React.FC<Props> = ({ onCompleteStep }) => {
   const [step4choosen, setStep4Choosen] = useState<number | null>(null);
   const [step4Confirmed, setStep4Confirmed] = useState(false);
   const [step5SelectedPage, setStep5SelectedPage] = useState(1);
+  const [finishedLastAnimation, setFinishedLastAnimation] = useState(false);
 
   const openModal = (modal: number) => {
     setCurrentModal(modal);
@@ -49,6 +51,30 @@ const Paper: React.FC<Props> = ({ onCompleteStep }) => {
     }
 
     return true;
+  };
+
+  const getBlurPosition = () => {
+    if (stepsStatus[5]) {
+      return "position6";
+    }
+
+    if (stepsStatus[4]) {
+      return "position5";
+    }
+
+    if (stepsStatus[3]) {
+      return "position4";
+    }
+
+    if (stepsStatus[2]) {
+      return "position3";
+    }
+
+    if (stepsStatus[1]) {
+      return "position2";
+    }
+
+    return "position1";
   };
 
   return (
@@ -94,6 +120,19 @@ const Paper: React.FC<Props> = ({ onCompleteStep }) => {
         </div>
       </div>
       <div className="paper__board">
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 1,
+            loop: Infinity,
+          }}
+          className={`paper__boardBlur ${
+            finishedLastAnimation && "visible"
+          } ${getBlurPosition()}`}
+        />
+
         <motion.div
           animate={{
             top: 0,
@@ -151,13 +190,7 @@ const Paper: React.FC<Props> = ({ onCompleteStep }) => {
             transition: { delay: 4.6, duration: 0.8 },
           }}
           className="paper__boardItem"
-        >
-          <img
-            src={babyBlockImg}
-            alt="babyBlockImg"
-            className="paper__bbBlock"
-          />
-        </motion.div>
+        />
         <motion.div
           animate={{
             top: 0,
@@ -218,6 +251,7 @@ const Paper: React.FC<Props> = ({ onCompleteStep }) => {
             opacity: stepsStatus[4] ? 1 : 0.5,
             transition: { delay: stepsStatus[4] ? 0.5 : 7, duration: 0.8 },
           }}
+          onAnimationComplete={() => setFinishedLastAnimation(true)}
           className="paper__boardItem"
         >
           <img
@@ -778,9 +812,21 @@ const Paper: React.FC<Props> = ({ onCompleteStep }) => {
             <img
               src={closeImg}
               alt="closeIcon"
-              onClick={() => setCurrentModal(null)}
+              onClick={() => {
+                setCurrentModal(null);
+                setStep5SelectedPage(1);
+              }}
               className="paper__modalClose"
             />
+
+            {step5SelectedPage === 1 && (
+              <img
+                className="paper__rightArr"
+                src={rightArrImg}
+                alt="rightArrImg"
+                onClick={() => setStep5SelectedPage(2)}
+              />
+            )}
 
             <motion.div
               initial={{ opacity: 0 }}

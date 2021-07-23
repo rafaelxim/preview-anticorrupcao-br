@@ -1,0 +1,106 @@
+.retrato {
+  height: 100vh;
+  background-image: url("../../assets/bg00205.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    min-height: calc(100vh - 9.6rem);
+  }
+
+  &__title {
+    font-size: 5.2rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    left: -10rem;
+
+    @media only screen and (max-width: 1367px) {
+      font-size: 6.2rem;
+    }
+  }
+
+  &__description {
+    color: #fff;
+    font-size: 3.4rem;
+    margin-top: 6rem;
+    line-height: 5rem;
+    position: relative;
+    top: -10rem;
+    opacity: 0;
+
+    @media only screen and (max-width: 1367px) {
+      font-size: 4.1rem;
+      line-height: 5.6rem;
+    }
+  }
+
+  &__closingText {
+    color: #063793;
+    font-size: 4.3rem;
+    font-weight: bold;
+    margin-top: 5rem;
+    opacity: 0;
+    left: -10rem;
+
+    @media only screen and (max-width: 1367px) {
+      font-size: 4.9rem;
+    }
+  }
+
+  &__bgImage {
+    position: absolute;
+    width: 63rem;
+    bottom: 2%;
+    left: 4%;
+  }
+
+  &__portaRetrato {
+    position: absolute;
+    width: 75rem;
+    bottom: 5rem;
+  }
+
+  &__star1 {
+    position: absolute;
+    bottom: 92rem;
+    left: 83rem;
+    width: 5rem;
+  }
+
+  &__star2 {
+    position: absolute;
+    bottom: 84rem;
+    left: 76rem;
+    width: 5rem;
+  }
+
+  &__star3 {
+    position: absolute;
+    bottom: 95rem;
+    left: 71rem;
+    width: 5rem;
+  }
+
+  &__left {
+    flex: 1 0 60%;
+    background-color: rgba(0, 149, 156, 0.8);
+    opacity: 0.8;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    padding: 7rem 44rem 0 6rem;
+  }
+
+  &__right {
+    flex: 1 0 40%;
+    position: relative;
+  }
+
+  &__actions {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+  }
+}
